@@ -273,3 +273,102 @@ html {
   .window-btn.close { background: var(--color-peach); }
   .window-btn.minimize { background: var(--color-bubble-pink) }
   .window-btn.maximize { background:  var(--color-mint); }
+
+
+.about-card {
+  background: var(--color-peach);
+  border: 4px solid var(--color-brown);
+  box-shadow: 6px 6px 0px var(--color-brown);
+  transition: all 0.3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.about-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0px var(--color-brown);
+}
+
+.about-card.pink {
+  background: var(--color-bubble-pink)
+}
+
+.about-card.mint {
+  background: var(--color-mint)
+}
+
+.about-card.cream {
+  background: var(--color-cream)
+}
+
+.icon-box {
+background: var(--color-cream);
+border: 3px solid var(--color-brown);
+box-shadow: 4px 4px 0px var(--color-brown);
+width: 80px;
+height: 80px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 40px;
+margin: 0 auto 20px;
+}
+
+.decorative-line {
+  height: 4px;
+  background: var(--color-brown);
+  width: 60px;
+  margin: 12px auto;
+}
+
+
+/*page decorations*/
+.emoji-container {
+  display: flex;
+  gap: 8px;
+}
+
+.floating-emoji {
+  position: absolute;
+  font-size: 24px;
+  animation: float 3s ease-in-out infinite;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.floating-emoji-line {
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+  animation: float 3s ease-in-out infinite;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+@keyframes floatAlt {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(-5deg);
+    }
+}
+
+.floating-emoji:nth-child(even) {
+    animation: floatAlt 4s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.sparkle {
+    animation: sparkle 2s ease-in-out infinite;
+}
