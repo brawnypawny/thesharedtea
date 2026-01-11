@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Tea</title>  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link href="./css/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./assets/icons/favicon.avif">
+    <script src="/js/index.js" defer></script>
+    
+</head>
+<body class="scroll-smooth font-retro bg-cream m-0">
+    <header>
+        <nav class="header__nav fixed top-0 left-0 w-full z-50">
+            <div class="logo">
+                <a href="/">
+                    <img src="./assets/icons/logo.png" alt="logo" class="h-8 w-auto">
+                </a>
+            </div>
+            <ul class="header__links">
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About Us</a></li> 
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
+        <section 
+            id="home" 
+            class="snap-section flex items-center justify-center bg-[url('/assets/images/cafe_background.jpg')] bg-cover bg-center mx-auto"
+        > 
+        <div>
+            <div class="flex justify-center">
+                <div class="card-retro inline-block relative -top-10">
+                    <h1 class="font-retro text-5xl md:text-7x1 font-bold text-brown mb-4">
+                        The Shared Tea
+                    <h1>
+                </div>     
+            </div> 
+
+            <div class="flex justify-content space-between gap-20 translate-x-32 mb-25">
+                <img src="/assets/icons/3_leaf.png" class="h-12 w-12">
+                <img src="/assets/icons/mail.png" class="h-12 w-12">
+                <img src="/assets/icons/drink.png" class="h-12 w-12">
+                <img src="/assets/icons/potion.webp" class="h-12 w-12">
+                <img src="/assets/icons/music.png" class="h-12 w-12">
+            </div>
+
+            <div class ="grid grid-cols-[1fr_auto_1fr_auto_1fr] items-center mx-auto -translate-y-15">
+                <div class="h-64 w-64 bg-mint"></div>
+                <p class="font-mandarin text-cream text-center bold-text text-6xl leading-none">享</p>
+                <div class="h-64 w-64 bg-bubble-pink"></div>
+                <p class="font-mandarin text-cream text-center text-6xl lea ding-none">茶</p>
+                <div class="h-64 w-64 bg-peach"></div>  
+            </div>
+
+            <div class="flex gap-4 justify-center -translate-y-6">
+                <a 
+                    href="https://www.instagram.com/thesharedtea/?hl=en"
+                    target="_blank"
+                    rel="noopener noferrer"
+                    aria-label="Instagram"
+                    class="inline-block drop-shadow-[2px_2px_0px_var(--color-brown)] active:translate-x-[1px] active:translate-y-[1px]"
+                >
+                    <img src="/assets/icons/instagram.svg" class="h-12 w-12"/>
+                </a>
+
+                <a 
+                    href="https://www.google.com/maps/place/The+Shared+Tea/@42.3326584,-71.1209505,17z/data=!3m1!4b1!4m6!3m5!1s0x89e3792540ed173b:0xc0377c8b2b08bc60!8m2!3d42.3326584!4d-71.1183756!16s%2Fg%2F11pbfmncs8?entry=ttu&g_ep=EgoyMDI2MDEwNy4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noferrer"
+                    aria-label="Google Maps"
+                    class="inline-block drop-shadow-[2px_2px_0px_var(--color-brown)] active:translate-x-[1px] active:translate-y-[1px]"
+                >
+                    <img src="/assets/icons/maps.png" class="h-12"/>
+                </a>
+
+                <a 
+                    href="https://www.google.com/viewer/chooseprovider?mid=/g/11pbfmncs8&g2lbs=AO8LyOK2JaSCOhq2okODH8BmvYju4VWcKq0jTZNzy4n1dLzHzuwg48tIpPz6_ZnUVba94_a-3z6dN7uzWVXno7AKhn5yJuDRQc9ZqhFZj1ojWd7DIbe1SNs%3D&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=9LBeae3lFIKpptQPxf3nwQQ&ei=9LBeae3lFIKpptQPxf3nwQQ&fo_s=OA&opi=79508299&ebb=1&cs=0&foub=mcpp"
+                    target="_blank"
+                    rel="noopener noferrer"
+                    aria-label="Order"
+                    class="inline-block active:translate-x-[1px] active:translate-y-[1px]"
+                >
+                    <button class="btn-retro text-retro h-12 w-45">ORDER ONLINE</button>
+                </a>
+            </div>
+
+            <!--
+            <div class="bg-cream dark:bg-brown text-brown dark:text-mint">
+                Dark mode enabled! 
+            </div> 
+            -->
+
+
+        </div>
+        </section>
+
+        <section id="about" class="snap-section min-h-screen bg-peach pt-20">
+            <div class="flex justify-center">
+                <div class="card-retro inline-block relative">
+                    <h1 class="font-retro text-5xl md:text-7x1 font-bold text-brown mb-4">
+                        ABOUT
+                    <h1>
+                </div>     
+            </div> 
+        </section>
+
+
+        <section id="menu" class="snap-section h-screen overflow-y-auto bg-mint pt-15 p-4">
+             <div class="grid grid-cols-[1fr_auto_1fr] items-center px-16 p-4">
+                <div></div>
+
+                <div class="card-retro inline-block">
+                    <h1 class="font-retro text-5xl md:text-7x1 font-bold text-brown">
+                        MENU
+                    <h1>
+                </div>      
+
+                <div class="flex items-center justify-end gap-6">
+                    <span class="font-retro text-brown font-bold text-2xl md:text-3xl">
+                        ---&gt
+                    </span>
+
+                    <a
+                        href="https://www.google.com/viewer/chooseprovider?mid=/g/11pbfmncs8&g2lbs=AO8LyOK2JaSCOhq2okODH8BmvYju4VWcKq0jTZNzy4n1dLzHzuwg48tIpPz6_ZnUVba94_a-3z6dN7uzWVXno7AKhn5yJuDRQc9ZqhFZj1ojWd7DIbe1SNs%3D&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-block active:translate-x-[1px] active:translate-y-[1px]"
+                    >
+                        <button class="btn-retro btn-retro-peach h-14 w-56 font-retro text-lg md:text-xl font-bold">
+                        ORDER ONLINE
+                        </button>
+                    </a>
+                </div>
+            </div>
+    
+            <div class="window-container">
+                <div class="window-header">
+                    <div class="flex items-center gap-3">
+                        <span class="font-bold text-cream">THE SHARED TEA OPTIONS</span>
+                    </div>
+                    <div class="flex gap-2">
+                        <div class="window-btn minimize">_</div>
+                        <div class="window-btn maximize">□</div>
+                        <div class="window-btn close">×</div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row">
+                    <aside class="w-full md:w-64 bg-cream border-r-3 border-brown p-4">
+
+                        <nav class="flex flex-col space-y-3">
+                            <button 
+                                class="sidebar-tab font-bold"
+                                data-section="sizes"
+                            >
+                                🥤 Cup Sizes   
+                            </button>
+                                
+                            <button 
+                                class="sidebar-tab font-bold" 
+                                data-section="toppings"
+                            >
+                                ⭐ TOPPINGS
+                            </button>
+                                
+                            <button 
+                                class="sidebar-tab font-bold" 
+                                data-section="milk-tea"
+                            >
+                                🧋 MILK TEA
+                            </button>
+
+                            <button 
+                                class="sidebar-tab font-bold" 
+                                data-section="sago"
+                            >
+                                ⚪ Sago Dessert
+                            </button>
+                            
+                            <button 
+                                class="sidebar-tab font-bold" 
+                                data-section="fruit-tea"
+                            >
+                                🍓 FRUIT TEA
+                            </button>
+                            
+                            <button 
+                                class="sidebar-tab font-bold" 
+                                data-section="smoothie"
+                            >
+                                🍉 SMOO-TEAS
+                            </button>
+                            
+                            <button 
+                                class="sidebar-tab font-bold" 
+                                data-section="yogurt"
+                            >
+                                🍧 Fruit Yogurt
+                            </button>
+
+                            <button
+                                class="sidebar-tab font-bold" 
+                                data-section="matcha"
+                            >
+                                🌿 MATCHA
+                            </button>
+
+                            <button 
+                                class="sidebar-tab font-bold" 
+                                data-section="taro"
+                            >
+                                🍠 TARO
+                            </button>
+                            
+                            <button 
+                                class="sidebar-tab font-bold" 
+                                data-section="bakery"
+                            >
+                                🍞 BAKERY
+                            </button>
+
+                        </nav>
+
+                    </aside>
+
+
+                    <main class="flex-1 menu-content overflow-y-auto" style="max-height: 70vh;">
+                        <section id="sizes" class="menu-section hidden">
+                            <div class="menu-category">
+                                <h2 class="menu-category-title">Cup Sizes</h2>
+                                <div class="menu-items-grid">
+
+                                    <div class="menu-item-card p-6 text-center">
+                                        <div class="text-4xl mb-3">🥤</div>
+                                        <h3 class="menu-item-title">Medium</h3>
+                                        <p class="menu-item-subtitle">16 oz</p>
+                                        <p class="menu-item-price">Base Size</p>
+                                    </div>    
+
+                                    <div class="menu-item-card p-6 text-center">
+                                        <div class="text-5xl mb-3">🥤</div>
+                                        <h3 class="menu-item-title">Large</h3>
+                                        <p class="menu-item-subtitle">24 oz</p>
+                                        <p class="menu-item-price">+ $1</p>
+                                    </div>
+                                    
+                                    <div class="menu-item-card p-6 text-center">
+                                        <div class="text-4xl mb-3">🍵</div>
+                                        <h3 class="menu-item-title">Hot</h3>
+                                        <p class="menu-item-price">+ $1</p>
+                                    </div>
+                                </div>
+                             </div>
+                        </section>
+
+                        <section id="toppings" class="menu-section hidden">
+                            <h2 class="menu-category-title"> Toppings</h2>
+                            <h3 class="menu-item-price"> add to any drink +$1</h3>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+
+                                <div class="menu-item-card">
+                                    <div class="menu-item-icon">🟤</div>
+                                    <h3 class="menu-item-title">Brown Sugar Boba</h3>
+                                    <p class="menu-item-subtitle">Sweet & chewy</p>
+                                </div>
+
+                                <div class="menu-item-card">
+                                    <div class="menu-item-icon">🟡</div>
+                                    <h3 class="menu-item-title">Golden Boba</h3>
+                                    <p class="menu-item-subtitle">Sweet & chewy</p>
+                                </div>
+
+                                <div class="menu-item-card">
+                                    <div class="menu-item-icon">⚪ </div>
+                                    <h3 class="menu-item-title">Sago</h3>
+                                    <p class="menu-item-subtitle">Slurpy</p>
+                                </div>
+                    
+                                
+                                <div class="menu-item-card">
+                                    <div class="menu-item-icon">🥭</div>
+                                    <h3 class="menu-item-title">Passion Fruit Popping Boba</h3>
+                                    <p class="menu-item-subtitle">Bursting fruit juice</p>
+                                </div>
+
+                                <div class="menu-item-card">
+                                    <div class="menu-item-icon">🫒</div>
+                                    <h3 class="menu-item-title">Lychee Popping Boba</h3>
+                                    <p class="menu-item-subtitle">Bursting fruit juice</p>
+                                </div>
+
+                                <div class="menu-item-card">
+                                    <div class="menu-item-icon">🟢</div>
+                                    <h3 class="menu-item-title">Herbal Grass Jelly</h3>
+                                    <p class="menu-item-subtitle">Mild & jiggly</p>
+                                </div>
+                                
+                                <div class="menu-item-card">
+                                    <div class="menu-item-icon">🍮</div>
+                                    <h3 class="menu-item-title">Pudding</h3>
+                                    <p class="menu-item-subtitle">Creamy custard</p>
+                                </div>
+
+                                 <div class="menu-item-card">
+                                    <div class="menu-item-icon">🫧</div>
+                                    <h3 class="menu-item-title">Crystal Bubbles</h3>
+                                    <p class="menu-item-subtitle">Crunchy</p>
+                                </div>
+
+                                <div class="menu-item-card">
+                                    <div class="menu-item-icon">🌸</div>
+                                    <h3 class="menu-item-title">Sakura Crystal Bubbles</h3>
+                                    <p class="menu-item-subtitle">Pink crunchy</p>
+                                </div>
+                                
+                                <div class="menu-item-card">
+                                    <div class="menu-item-icon">☁️</div>
+                                    <h3 class="menu-item-title">Cheese Foam</h3>
+                                    <p class="menu-item-subtitle">Salty sweet cloud</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="milk-tea" class="menu-section hidden">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-30 items-start">
+                                <!-- Left Col-->
+                                <div class="menu-category">
+                                    <h2 class="menu-category-title">Milk Tea (Drink Base)</h2>
+                                    <div class="menu-items-grid-2">
+                                        <div class="menu-item-card">
+                                            <h3 class="menu-item-title">Signature Black Milk Tea</h3>
+                                            <p class="menu-item-subtitle"> Classic black tea with creamy milk</p>
+                                            <p class="menu-item-price">$5.25</p>
+                                        </div>
+                                        
+                                        <div class="menu-item-card">
+                                            <h3 class="menu-item-title">Jasmine Green Milk Tea</h3>
+                                            <p class="menu-item-subtitle">Fragrant jasmine with smooth milk</p>
+                                            <p class="menu-item-price">$5.25</p>
+                                        </div>
+                                        
+                                        <div class="menu-item-card">
+                                            <h3 class="menu-item-title">Roasted Oolong Milk Tea</h3>
+                                            <p class="menu-item-subtitle">Rich roasted flavor notes</p>
+                                            <p class="menu-item-price">$5.25</p>
+                                        </div>
+                                        
+                                        <div class="menu-item-card">
+                                            <h3 class="menu-item-title">Everspring Green Milk Tea</h3>
+                                            <p class="menu-item-subtitle">Four Seasons Spring · Deep and refreshing floral aroma green tea</p>
+                                            <p class="menu-item-price">$5.25</p>
+                                        </div>
+            
+                                    </div>
+                                </div>
+                                
+                                <!-- Right Col -->
+                                <div class="menu-category">
+                                    <h2 class="menu-category-title">with Toppings</h2>
+                                    <div class="menu-items-grid-2">
+                                        
+                                        <div class="menu-item-card">
+                                            <div class="menu-item-icon">🧋🟤</div>
+                                            <h3 class="menu-item-title">Brown Sugar Bubble Milk Tea</h3>
+                                            <p class="menu-item-price">$6.25</p>
+                                        </div>
+
+                                        <div class="menu-item-card">
+                                            <div class="menu-item-icon">🥛🟤</div>
+                                            <h3 class="menu-item-title">Brown Sugar Bubble Milk</h3>
+                                            <p class="menu-item-subtitle">No caffeine</p>
+                                            <p class="menu-item-price">$6.25</p>
+                                        </div>
+                                        
+                                        <div class="menu-item-card">
+                                            <div class="menu-item-icon">🍪☁️</div>
+                                            <h3 class="menu-item-title">Oreo Cake Cream Milk Tea</h3>
+                                            <p class="menu-item-price">$6.50</p>
+                                        </div>
+
+                                        <div class="menu-item-card">
+                                            <div class="menu-item-icon">🍮🔥</div>
+                                            <h3 class="menu-item-title">Baked Bree Caramel Milk Tea</h3>
+                                            <p class="menu-item-price">$6.75</p>
+                                        </div>
+
+                                        <div class="menu-item-card">
+                                            <div class="menu-item-icon">☁️</div>
+                                            <h3 class="menu-item-title">Cake Cream Milk Tea</h3>
+                                            <p class="menu-item-price">$6.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="sago" class="menu-section hidden">
+                            <div class="menu-category">
+                                <h2 class="menu-category-title">Sago Series</h2>
+                                <div class="menu-items-grid">
+
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🥭🥥⚪</div>
+                                        <h3 class="menu-item-title">Mango Pomelo Sago Coconut Milk</h3>
+                                        <p class="menu-item-price">$7.75</p>
+                                    </div>     
+
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🍑🥥⚪</div>
+                                        <h3 class="menu-item-title">Peach Sago Coconut Milk</h3>
+                                        <p class="menu-item-price">$7.75</p>
+                                    </div>                                                 
+
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🍧🥥⚪</div>
+                                        <h3 class="menu-item-title">Dragon Fruit Sago Coconut Milk</h3>
+                                        <p class="menu-item-price">$8.75</p>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="fruit-tea" class="menu-section hidden">
+                            <div class="menu-category">
+                                <h2 class="menu-category-title">Fresh Fruit Iced Tea</h2>
+                                <div class="menu-items-grid">
+                                    
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🍊🍓🍋‍🟩</div>
+                                        <h3 class="menu-item-title">Fruit Overload</h3>
+                                        <p class="menu-item-price">$7.50</p>
+                                    </div>
+                                    
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🫒🍋‍🟩</div>
+                                        <h3 class="menu-item-title">Lychee Iced Tea</h3>
+                                        <p class="menu-item-price">$7.50</p>
+                                    </div>
+
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🍓🍅</div>
+                                        <h3 class="menu-item-title">Strawberry Grape Tomato</h3>
+                                        <p class="menu-item-price">$8.00</p>
+                                    </div>
+                                    
+
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🥭🧊</div>
+                                        <h3 class="menu-item-title">Mango Iced Tea</h3>
+                                        <p class="menu-item-price">$7.50</p>
+                                    </div>     
+
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🍊</div>
+                                        <h3 class="menu-item-title">Orange Iced Tea</h3>
+                                        <p class="menu-item-price">$7.50</p>
+                                    </div>                                         
+
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🍍</div>
+                                        <h3 class="menu-item-title">Pineapple Iced Tea</h3>
+                                        <p class="menu-item-price">$7.50</p>
+                                    </div>  
+                                    
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🥝</div>
+                                        <h3 class="menu-item-title">Kiwi Iced Tea</h3>
+                                        <p class="menu-item-price">$7.50</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="smoothie" class="menu-section hidden">
+                            <div class="menu-category">
+                                <h2 class="menu-category-title">SMOO-TEAs</h2>
+                                <div class="menu-items-grid">
+
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🥭☁️</div>
+                                        <h3 class="menu-item-title">Mango Smoothie +Cheese Foam</h3>
+                                        <p class="menu-item-price">$7.50</p>
+                                    </div>     
+
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🍓☁️</div>
+                                        <h3 class="menu-item-title">Strawberry Smoothie +Cheese Foam</h3>
+                                        <p class="menu-item-price">$7.50</p>
+                                    </div>      
+
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🍉☁️</div>
+                                        <h3 class="menu-item-title">Watermelon Smoothie +Cheese Foam</h3>
+                                        <p class="menu-item-price">$7.50</p>
+                                    </div>     
+                                    
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🍑☁️</div>
+                                        <h3 class="menu-item-title">Peach Smoothie +Cheese Foam</h3>
+                                        <p class="menu-item-price">$7.50</p>
+                                    </div>                                            
+
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🍍☁️</div>
+                                        <h3 class="menu-item-title">Pineapple Smoothie +Cheese Foam</h3>
+                                        <p class="menu-item-price">$7.50</p>
+                                    </div>  
+                                    
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🥝☁️</div>
+                                        <h3 class="menu-item-title">Kiwi Smoothie +Cheese Foam </h3>
+                                        <p class="menu-item-price">$7.50</p>
+                                    </div>
+
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🍧☁️</div>
+                                        <h3 class="menu-item-title">Dragon Fruit Smoothie +Cheese Foam</h3>
+                                        <p class="menu-item-price">$8.50</p>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="yogurt" class="menu-section hidden">
+                            <div class="menu-category">
+                                <h2 class="menu-category-title">Fruit Yogurt Crystals</h2>
+                                <div class="menu-items-grid">
+
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🥭🍧🫧</div>
+                                        <h3 class="menu-item-title">Mango Yogurt +Crystal Bubbles</h3>
+                                        <p class="menu-item-price">$6.75</p>
+                                    </div> 
+
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🍑🍧🫧</div>
+                                        <h3 class="menu-item-title">Peach Yogurt +Crystal Bubbles</h3>
+                                        <p class="menu-item-price">$6.75</p>
+                                    </div>     
+
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🍓🍧🫧</div>
+                                        <h3 class="menu-item-title">Strawberry Yogurt +Crystal Bubbles</h3>
+                                        <p class="menu-item-price">$6.75</p>
+                                    </div>      
+
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🍍🍧🫧</div>
+                                        <h3 class="menu-item-title">Pineapple Yogurt +Crystal Bubbles</h3>
+                                        <p class="menu-item-price">$6.75</p>
+                                    </div>  
+                                    
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🥝🍧🫧</div>
+                                        <h3 class="menu-item-title">Kiwi Yogurt +Crystal Bubbles</h3>
+                                        <p class="menu-item-price">$6.75</p>
+                                    </div>                              
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="matcha" class="menu-section hidden">
+                            <div class="menu-category">
+                                <h2 class="menu-category-title">Matcha</h2>
+                                <div class="menu-items-grid">
+                                    
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🌿🍵</div>
+                                        <h3 class="menu-item-title">Signature Matcha</h3>
+                                        <p class="menu-item-price">$6.00</p>
+                                    </div>
+                                    
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🌿☁️</div>
+                                        <h3 class="menu-item-title">Matcha +Cake Cream</h3>
+                                        <p class="menu-item-price">$6.75</p>
+                                    </div>
+
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🌿☁️</div>
+                                        <h3 class="menu-item-title">Matcha +Cheese Foam</h3>
+                                        <p class="menu-item-price">$6.75</p>
+                                    </div>
+
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🌿🌸</div>
+                                        <h3 class="menu-item-title">Matcha Latte +Sakura Crystal Bubble</h3>
+                                        <p class="menu-item-price">$6.75</p>
+                                    </div>
+
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🌿🍦</div>
+                                        <h3 class="menu-item-title">Matcha Slush +Cream Foam</h3>
+                                        <p class="menu-item-price">$6.75</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>                        
+
+                        <section id="taro" class="menu-section hidden">
+                            <div class="menu-category">
+                                <h2 class="menu-category-title">Taro Series</h2>
+                                <div class="menu-items-grid">
+                                    
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🍠🥛</div>
+                                        <h3 class="menu-item-title">Taro Milk</h3>
+                                        <p class="menu-item-price">$6.00</p>
+                                    </div>
+                                    
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🍪🍠</div>
+                                        <h3 class="menu-item-title">Oreo Taro Milk</h3>
+                                        <p class="menu-item-price">$6.75</p>
+                                    </div>
+
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🍠🥥</div>
+                                        <h3 class="menu-item-title">Taro Raw Coconut</h3>
+                                        <p class="menu-item-price">$6.00</p>
+                                    </div>
+
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🍠🌿</div>
+                                        <h3 class="menu-item-title">Taro Matcha</h3>
+                                        <p class="menu-item-price">$6.75</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>       
+                        
+                        <section id="bakery" class="menu-section hidden">
+                            <div class="menu-category">
+                                <h2 class="menu-category-title">Bakery</h2>
+                                <div class="menu-items-grid">
+                                    
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🍡🥯</div>
+                                        <h3 class="menu-item-title">Mochi Bites</h3>
+                                        <p class="menu-item-price">$3.75</p>
+                                    </div>
+                                    
+                                    <div class="menu-item-card">
+                                        <div class="menu-item-icon">🍫🥯</div>
+                                        <h3 class="menu-item-title">Oreo Taro Milk</h3>
+                                        <p class="menu-item-price">$4.25</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>    
+
+                    </main>
+                </div>
+            
+
+            </div>
+        </section>
+
+
+        <section id="contact" class="snap-section min-h-screen bg-bubble-pink pt-20">
+            <div class="flex justify-center">
+                <div class="card-retro inline-block relative">
+                    <h1 class="font-retro text-5xl md:text-7x1 font-bold text-brown mb-4">
+                        CONTACT
+                    <h1>
+                </div>     
+            </div> 
+        </section>
+    </main>
+
+    
+</body>
+</html>

@@ -1,0 +1,275 @@
+@import "tailwindcss"; /*shorthand for:
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+*/
+
+@theme {
+    --color-cream: #FFF8E7;
+    --color-brown: #493223;
+    --color-mint: #B8E6D5;
+    --color-bubble-pink: #ffc2cf;
+    --color-lavender: #E8D5F2;
+    --color-peach: #FFCBA4;
+
+    --font-retro: "Pixelify Sans", monospace;
+    --font-mandarin: "DotGothic16", sans-serif;
+}
+
+
+@layer components {
+
+  .card-retro {
+    --btn-bg: var(--color-cream);
+    @apply font-retro font-bold text-sm md:text-lg px-6 py-2 
+          rounded-none border-4 border-brown bg-[var(--btn-bg)]
+          shadow drop-shadow-[4px_4px_0px_var(--color-brown)];
+  }
+
+  .btn-retro {
+    --btn-bg: var(--color-cream);
+    @apply font-retro font-bold text-sm md:text-lg px-6 py-2 
+          rounded-none border-4 border-brown bg-[var(--btn-bg)]
+          shadow drop-shadow-[4px_4px_0px_var(--color-brown)];
+  }
+  .btn-retro-peach {
+    --btn-bg: var(--color-peach);
+  }
+  .btn-retro-pink {
+    --btn-bg: var(--color-bubble-pink);
+  }
+
+  .btn-retro:hover {
+    @apply shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] translate-x-[2px] translate-y-[2px];
+  }
+  .btn-retro:active {
+    @apply shadow-none translate-x-[4px] translate-y-[4px];
+  }
+
+}
+
+@layer utilities {
+}
+
+
+.snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+/* Each section snaps into place */
+.snap-section {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.snap-container::-webkit-scrollbar {
+    display: none;
+}
+.snap-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.header__nav {
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-brown);
+}
+  
+.logo {
+  flex: 1;
+  display: ;
+
+  position: relative;
+  padding: 0 20px;
+}
+
+.header__links {
+  list-style-type: none; /* Removes bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Aligns list items horizontally */
+}
+
+.header__links li a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 16px;
+  display: block;
+}
+
+.header__links li a:hover {
+  color: var(--color-mint);
+}
+
+.sidebar-tab {
+  border: 3px solid var(--color-brown);
+  background: var(--color-mint);
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 3px 3px 0px var(--color-brown);
+}
+.sidebar-tab:hover,
+.sidebar-tab:active {
+  background: var(--color-bubble-pink);
+  box-shadow: 5px 5px 0px var(--color-brown);
+  transform: translateX(-3px);
+}
+
+.sidebar-tab.is-active {
+  background: var(--color-bubble-pink);
+  box-shadow: 5px 5px 0px var(--color-brown);
+  transform: translateX(-2px);
+}
+
+
+/*menu cards*/
+.menu-item-card {
+  border: 3px solid var(--color-brown);
+  background: var(--color-peach);
+  transition: all 0.2s;
+  box-shadow: 4px 4px 0px var(--color-brown);
+  width: 100%;
+  padding: 10px;
+}
+
+.menu-item-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--color-brown);
+}
+
+.menu-section {
+    @apply min-h-screen p-4 md:p-8 bg-bubble-pink;
+    padding: 24px;
+}
+
+
+.menu-category {
+    @apply self-start;
+}
+
+.menu-category-title {
+    @apply font-retro font-bold text-lg md:text-xl lg:text-2xl text-brown mb-4 pb-2 border-b-2 border-brown;
+}
+
+.menu-items-grid-2 {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+} 
+
+.menu-items-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6
+}
+
+.menu-item-icon {
+    @apply text-3xl mb-2;
+}
+
+.menu-item-title {
+    @apply font-bold text-base leading-tight md:text-lg text-gray-800 mb-1;
+}
+
+.menu-item-subtitle {
+    @apply text-sm text-gray-600;
+}
+
+.menu-item-price {
+    @apply text-sm font-semibold text-amber-700;
+}
+
+
+
+
+.menu-content::-webkit-scrollbar {
+    width: 12px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.menu-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border: 2px solid var(--color-brown);
+}
+
+.menu-content::-webkit-scrollbar-thumb {
+    background: #FFD6E8;
+    border: 2px solid var(--color-brown);
+}
+
+.menu-content::-webkit-scrollbar-thumb:hover {
+    background: var(--color-bubble-pink);
+}
+
+/*window decoration*/
+.window-container {
+      border: 3px solid var(--color-brown);
+      border-radius: 8px;
+      background: var(--color-brown);
+      box-shadow: 8px 8px 0px rgba(0,0,0,0.2);
+      max-width: 1500px;
+      margin: 0 auto;     
+  }
+  
+  .window-header {
+      background: var(--color-brown);
+      border-bottom: 3px solid var(--color-brown);
+      padding: 8px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  .window-btn {
+      width: 20px;.window-container {
+      border: 3px solid var(--color-cream);
+      border-radius: 8px;
+      background: var(--color-brown);
+      box-shadow: 8px 8px 0px rgba(0,0,0,0.2);
+    }
+    
+    .window-header {
+        background: var(--color-brown);
+        border-bottom: 3px solid var(--color-brown);
+        padding: 8px 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .window-btn {
+        width: 20px;
+        height: 20px;
+        border: 2px solid var(--color-cream);
+        border-radius: 3px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    
+    .window-btn.close { background: var(--color-peach); }
+    .window-btn.minimize { background: var(--color-bubble-pink) }
+    .window-btn.maximize { background:  var(--color-mint); }
+        height: 20px;
+        border: 2px solid var(--color-cream);
+        border-radius: 3px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+  }
+  
+  .window-btn.close { background: var(--color-peach); }
+  .window-btn.minimize { background: var(--color-bubble-pink) }
+  .window-btn.maximize { background:  var(--color-mint); }
