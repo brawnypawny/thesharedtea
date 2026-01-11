@@ -334,6 +334,10 @@ margin: 0 auto 20px;
   animation: float 3s ease-in-out infinite;
   opacity: 0.7;
   pointer-events: none;
+
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .floating-emoji-line {
