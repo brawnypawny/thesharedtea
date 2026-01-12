@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const tabs = document.querySelectorAll('.sidebar-tab');
   const sections = document.querySelectorAll('.menu-section');
+  const menuContent = document.getElementById("menu-content");
 
   function showSection(sectionId){
     sections.forEach(section => {
@@ -20,7 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
         activeSection.classList.remove('hidden');
     if (activeTab)
         activeTab.classList.add('is-active');
+
+
+    // reset menu scroll position
+    setTimeout(() => {
+      menuContent.scrollTo({ top: 0, behavior: "smooth" });
+    });
   }
+
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -33,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (tabs.length > 0) {
     showSection(tabs[2].dataset.section);
   }
+
 
 
 // handler for leave a message form

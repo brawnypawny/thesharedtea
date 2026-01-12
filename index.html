@@ -31,34 +31,24 @@
     <main class="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
         <section 
             id="home" 
-            class="snap-section flex items-center justify-center bg-[url('/assets/images/cafe_background.jpg')] bg-cover bg-center mx-auto"
+            class="snap-section flex justify-center bg-[url('/assets/images/shop_background.png')] bg-cover bg-center mx-auto"
         > 
         <div>
+
+            <div class ="flex items-center justify-center gap-71 mt-55">
+                <p class="font-mandarin text-cream text-center font-bold text-9xl leading-none">享</p>
+                <p class="font-mandarin text-cream text-center font-bold text-9xl leading-none">茶</p>
+            </div>
+
             <div class="flex justify-center">
-                <div class="card-retro inline-block relative -top-10">
+                <div class="card-retro inline-block relative mt-50">
                     <h1 class="font-retro text-5xl md:text-7x1 font-bold text-brown mb-4">
                         The Shared Tea
                     <h1>
                 </div>     
             </div> 
 
-            <div class="flex justify-content space-between gap-20 translate-x-32 mb-25">
-                <img src="/assets/icons/3_leaf.png" class="h-12 w-12">
-                <img src="/assets/icons/mail.png" class="h-12 w-12">
-                <img src="/assets/icons/drink.png" class="h-12 w-12">
-                <img src="/assets/icons/potion.webp" class="h-12 w-12">
-                <img src="/assets/icons/music.png" class="h-12 w-12">
-            </div>
-
-            <div class ="grid grid-cols-[1fr_auto_1fr_auto_1fr] items-center mx-auto -translate-y-15">
-                <div class="h-64 w-64 bg-mint"></div>
-                <p class="font-mandarin text-cream text-center bold-text text-6xl leading-none">享</p>
-                <div class="h-64 w-64 bg-bubble-pink"></div>
-                <p class="font-mandarin text-cream text-center text-6xl lea ding-none">茶</p>
-                <div class="h-64 w-64 bg-peach"></div>  
-            </div>
-
-            <div class="flex gap-4 justify-center -translate-y-6">
+            <div class="flex gap-4 justify-center mt-8">
                 <a 
                     href="https://www.instagram.com/thesharedtea/?hl=en"
                     target="_blank"
@@ -86,7 +76,7 @@
                     aria-label="Order"
                     class="inline-block active:translate-x-[1px] active:translate-y-[1px]"
                 >
-                    <button class="btn-retro text-retro h-12 w-45">ORDER ONLINE</button>
+                    <button class="btn-retro btn-retro-peach h-12 w-45">ORDER ONLINE</button>
                 </a>
             </div>
 
@@ -155,7 +145,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto p-8">
                 
                 <!-- Card 1: Flavor Lab -->
-                <div class="about-card pink p-8">
+                <div class="about-card lavender p-8">
                     <div class="icon-box">
                         <img src="/assets/icons/potion.webp">
                     </div>
@@ -169,7 +159,7 @@
                 </div>
 
                 <!-- Card 2: Quality Ingredients & Time -->
-                <div class="about-card cream p-8">
+                <div class="about-card mint p-8">
                     <div class="icon-box">
                         <img src="/assets/icons/clock.jpg">
                     </div>
@@ -183,7 +173,7 @@
                 </div>
 
                 <!-- Card 3: For Sharing -->
-                <div class="about-card mint p-8">
+                <div class="about-card yellow p-8">
                     <div class="icon-box">
                         <img src="/assets/icons/favicon.avif">
                     </div>
@@ -318,7 +308,7 @@
                     </aside>
 
 
-                    <main class="flex-1 menu-content overflow-y-auto" style="max-height: 70vh;">
+                    <main id= "menu-content" class="flex-1 overflow-y-auto" style="max-height: 70vh;">
                         <section id="sizes" class="menu-section hidden">
                             <div class="menu-category">
                                 <h2 class="menu-category-title">Cup Sizes</h2>
@@ -754,7 +744,7 @@
         </section>
 
 
-        <section id="contact" class="snap-section min-h-screen bg-bubble-pink pt-20">
+        <section id="contact" class="snap-section min-h-screen bg-lavender pt-20">
             <div class="flex justify-center">
                 <div class="card-retro inline-block relative">
                     <h1 class="font-retro text-5xl md:text-7x1 font-bold text-brown mb-4">
