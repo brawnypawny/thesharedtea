@@ -34,5 +34,51 @@ document.addEventListener('DOMContentLoaded', () => {
     showSection(tabs[2].dataset.section);
   }
 
+
+// handler for leave a message form
+  const form = document.getElementById('message-form');
+  if (!form) return;
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+    const button = form.querySelector("button");
+    const msg = document.getElementById("form-message");
+
+    button.disabled = true;
+    button.textContent = "Sending…";
+
+    msg.classList.add("hidden");
+    msg.textContent = "";
+
+    try {
+      const response = await fetch("https://formspree.io/f/xbddrnpz", {
+          method: 'POST',
+          body: formData,
+          headers: {
+              'Accept': 'application/json'
+          }
+      });
+
+      if (response.ok) {
+        form.reset();
+        msg.textContent = "Message sent!";
+        msg.className = "mt-4 font-bold text-peach";
+      } else {
+        msg.textContent = "Something went wrong...";
+        msg.className = "mt-4 font-bold text-red-700";
+      }
+    } catch {
+      msg.textContent = "Network error.";
+      msg.className = "mt-4 font-bold text-red-700";
+    } finally {
+      button.disabled = false;
+      button.textContent = "Send";
+      msg.classList.remove("hidden");
+    }
+  });
 });
+
+
 

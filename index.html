@@ -811,10 +811,7 @@
                 <div class="contact-card" style="height:100%;">
                     <h2 class="menu-category-title">Leave a Message</h2>
 
-                    <form
-                        action="https://formspree.io/f/xbddrnpz"
-                        method="POST"
-                        >
+                    <form id="message-form">
 
                         <div class="mb-6">
                             <label class="font-bold block" style="color: var(--color-brown);">
@@ -838,11 +835,14 @@
                                 class="form-textarea mb-4" style="height:150px"
                                 placeholder="Message..."
                                 required
-                            >
-                            </textarea>
+                            ></textarea>
                         </div>
                     
-                        <button type="submit" class="btn-retro mt-2">Send</button>
+                        <div class="flex items-center gap-3">
+                            <button type="submit" class="btn-retro mt-2">Send</button>
+
+                            <p id="form-message" class="mt-4 hidden" style="color: var(--color-peach)"></p>
+                        </div>
                     </form>
                 </div>
 
