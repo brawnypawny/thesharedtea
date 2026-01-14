@@ -31,24 +31,29 @@
     <main class="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
         <section 
             id="home" 
-            class="snap-section flex justify-center bg-[url('/assets/images/shop_background.png')] bg-cover bg-center mx-auto"
+            class="snap-section flex items-center justify-center bg-[url('/assets/images/shop_background_dynamic.png')] bg-cover bg-left md:bg-center mx-auto"
         > 
         <div>
 
-            <div class="flex items-center justify-center gap-16 md:gap-40 lg:gap-71 mt-20 md:mt-40 lg:mt-55">
-                <p class="font-mandarin text-cream text-center font-bold text-6xl md:text-8xl lg:text-9xl leading-none">享</p>
-                <p class="font-mandarin text-cream text-center font-bold text-6xl md:text-8xl lg:text-9xl leading-none">茶</p>
+            <div class="flex flex-row items-center justify-center gap-0 md:grid md:grid-cols-[1fr_auto_1fr_auto_1fr] md:items-end md:justify-items-center md:mt-15 lg:mt-20 max-w-6xl mx-auto">
+                <img src="/assets/images/portrait1.png" class="w-40 md:w-full h-auto object-contain">
+                <div class="flex flex-col items-center md:contents">
+                    <p class="font-mandarin text-cream text-center font-bold text-6xl md:text-8xl lg:text-9xl leading-none md:self-center drop-shadow-[3px_3px_0px_var(--color-brown)]">享</p>
+                    <img src="/assets/images/portrait2.png" class="hidden md:block md:w-full h-auto object-contain">
+                    <p class="font-mandarin text-cream text-center font-bold text-6xl md:text-8xl lg:text-9xl leading-none md:self-center drop-shadow-[3px_3px_0px_var(--color-brown)]">茶</p>
+                </div>
+                <img src="/assets/images/portrait3.png" class="hidden md:block md:w-full h-auto object-contain">
             </div>
 
             <div class="flex justify-center">
-                <div class="card-retro inline-block relative mt-12 md:mt-28 lg:mt-50">
-                    <h1 class="font-retro text-5xl md:text-7xl font-bold text-brown mb-4">
+                <div class="card-retro inline-block relative mt-6 md:mt-6 lg:mt-8">
+                    <h1 class="font-retro text-2xl md:text-6xl font-bold text-brown mb-2">
                         The Shared Tea
                     <h1>
                 </div>     
             </div> 
 
-            <div class="flex gap-4 justify-center mt-8">
+            <div class="flex gap-4 justify-center mt-4">
                 <a 
                     href="https://www.instagram.com/thesharedtea/?hl=en"
                     target="_blank"
@@ -74,9 +79,10 @@
                     target="_blank"
                     rel="noopener noferrer"
                     aria-label="Order"
-                    class="inline-block active:translate-x-[1px] active:translate-y-[1px]"
                 >
-                    <button class="btn-retro btn-retro-peach h-12 w-auto px-6 min-w-32 md:w-45">ORDER ONLINE</button>
+                    <button 
+                        class="btn-retro btn-retro-peach h-12 px-4 min-w-20 md:w-45"
+                    >ORDER ONLINE</button>
                 </a>
             </div>
 
