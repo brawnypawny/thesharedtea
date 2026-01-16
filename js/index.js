@@ -87,6 +87,48 @@ document.addEventListener('DOMContentLoaded', () => {
       msg.classList.remove("hidden");
     }
   });
+
+  // Typewriter effect for about cards
+  function typewriterEffect(element, text, speed = 10) {
+    let i = 0;
+    element.textContent = '';
+    element.classList.add('typewriter-text');
+
+    function type() {
+      if (i < text.length) {
+        element.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, speed);
+      } else {
+        // Let cursor blink twice before hiding
+        setTimeout(() => element.classList.add('done'), 2000);
+      }
+    }
+    type();
+  }
+
+  const sectionsA = [
+    document.getElementById('about'),
+    document.getElementById('contact'),
+  ].filter(Boolean);
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Find typewriter elements within this section that haven't animated yet
+        const typewriterElements = entry.target.querySelectorAll('[data-typewriter]:not(.typewriter-done)');
+        typewriterElements.forEach(el => {
+          el.classList.add('typewriter-done'); // Mark as animated
+          const text = el.dataset.typewriter;
+          typewriterEffect(el, text);
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+
+  sectionsA.forEach(section => observer.observe(section));
+
+
 });
 
 

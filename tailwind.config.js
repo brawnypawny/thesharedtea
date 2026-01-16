@@ -11,6 +11,9 @@ export default {
         retro: ['"Pixelify Sans"', "monospace"],
         terminal: ['"VT323"', "monospace"],
       },
+      animation: {
+        caret: 'caret 0.75s steps(1) infinite',
+      },
     },
   },
 };

@@ -458,3 +458,29 @@ html {
     transition: all 0.2s;
 }
    
+
+/* Typewriter effect - retro terminal style */
+@keyframes blink-cursor {
+  50% { opacity: 0; }
+}
+
+.typewriter-text {
+  display: inline-block;
+  white-space: pre-wrap;
+  position: relative;
+}
+
+.typewriter-text::after {
+  content: '';
+  display: inline-block;
+  width: 0.6ch;
+  height: 1em;
+  margin-left: 2px;
+  background-color: var(--color-brown);
+  animation: blink-cursor 1s steps(1) infinite;
+  vertical-align: text-bottom;
+}
+
+.typewriter-text.done::after {
+  display: none;
+}
