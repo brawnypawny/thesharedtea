@@ -351,6 +351,23 @@ html {
   background: var(--color-brown);
   width: 60px;
   margin: 12px auto;
+  transform-origin: left;
+  animation: line-reveal 0.5s ease-out forwards;
+  animation-play-state: paused;
+  transform: scaleX(0);
+}
+
+.decorative-line.animate {
+  animation-play-state: running;
+}
+
+@keyframes line-reveal {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 
 
@@ -495,6 +512,11 @@ html {
   animation:
     typing 3s steps(14, end) forwards,
     blink-caret 0.75s step-end infinite;
+  animation-play-state: paused;
+}
+
+.title-typewriter.animate {
+  animation-play-state: running;
 }
 
 @keyframes typing {

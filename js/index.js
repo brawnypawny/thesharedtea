@@ -108,7 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const sectionsA = [
+    document.getElementById('home'),
     document.getElementById('about'),
+    document.getElementById('menu'),
     document.getElementById('contact'),
   ].filter(Boolean);
 
@@ -121,6 +123,12 @@ document.addEventListener('DOMContentLoaded', () => {
           el.classList.add('typewriter-done'); // Mark as animated
           const text = el.dataset.typewriter;
           typewriterEffect(el, text);
+        });
+
+        // Trigger CSS animations for title-typewriter and decorative-line
+        const animatedElements = entry.target.querySelectorAll('.title-typewriter:not(.animate), .decorative-line:not(.animate)');
+        animatedElements.forEach(el => {
+          el.classList.add('animate');
         });
       }
     });
