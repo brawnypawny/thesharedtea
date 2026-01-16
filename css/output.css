@@ -458,6 +458,9 @@
   .bg-mint {
     background-color: var(--color-mint);
   }
+  .bg-\[url\(\'\.\.\/assets\/images\/drinks_banner\.png\'\)\] {
+    background-image: url('../assets/images/drinks_banner.png');
+  }
   .bg-\[url\(\'\.\.\/assets\/images\/shop_background_dynamic\.png\'\)\] {
     background-image: url('../assets/images/shop_background_dynamic.png');
   }
