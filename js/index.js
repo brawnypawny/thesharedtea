@@ -1,35 +1,78 @@
-//import { initFilters } from './filters.js'
-
 document.addEventListener('DOMContentLoaded', () => {
-  const tabs = document.querySelectorAll('.sidebar-tab');
-  const sections = document.querySelectorAll('.menu-section');
-  const menuContent = document.getElementById("menu-content");
 
-  function showSection(sectionId){
-    sections.forEach(section => {
-      section.classList.add('hidden');
+  // ===========================================
+  // SCROLL-TRIGGERED ANIMATIONS
+  // ===========================================
+
+  // Intersection Observer for scroll reveal animations
+  const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, {
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  scrollRevealElements.forEach(el => revealObserver.observe(el));
+
+  // ===========================================
+  // POUR SECTION ZOOM ON SCROLL
+  // ===========================================
+
+  const pourSection = document.querySelector('.pour-section');
+
+  if (pourSection) {
+    const pourObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          pourSection.classList.add('is-zoomed');
+        } else {
+          pourSection.classList.remove('is-zoomed');
+        }
+      });
+    }, {
+      threshold: 0.5
     });
 
+    pourObserver.observe(pourSection);
+  }
+
+  // ===========================================
+  // MENU TAB FUNCTIONALITY
+  // ===========================================
+
+  const tabs = document.querySelectorAll('.menu-tab');
+  const panels = document.querySelectorAll('.menu-panel');
+
+  function showSection(sectionId) {
+    // Hide all panels
+    panels.forEach(panel => {
+      panel.classList.add('hidden');
+    });
+
+    // Remove active state from all tabs
     tabs.forEach(tab => {
       tab.classList.remove('is-active');
     });
 
-    const activeSection = document.getElementById(sectionId);
+    // Show selected panel
+    const activePanel = document.getElementById(sectionId);
     const activeTab = document.querySelector(`[data-section="${sectionId}"]`);
 
-    if (activeSection) 
-        activeSection.classList.remove('hidden');
-    if (activeTab)
-        activeTab.classList.add('is-active');
-
-
-    // reset menu scroll position
-    setTimeout(() => {
-      menuContent.scrollTo({ top: 0, behavior: "smooth" });
-    });
+    if (activePanel) {
+      activePanel.classList.remove('hidden');
+    }
+    if (activeTab) {
+      activeTab.classList.add('is-active');
+    }
   }
 
-
+  // Add click handlers to tabs
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       const sectionId = tab.dataset.section;
@@ -37,14 +80,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // show default section
+  // Show default section (milk-tea)
   if (tabs.length > 0) {
-    showSection(tabs[2].dataset.section);
+    showSection('milk-tea');
   }
 
-
-
-// handler for leave a message form
+  // Contact form handler
   const form = document.getElementById('message-form');
   if (!form) return;
 
@@ -56,88 +97,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const msg = document.getElementById("form-message");
 
     button.disabled = true;
-    button.textContent = "Sending…";
+    button.textContent = "Sending...";
 
     msg.classList.add("hidden");
     msg.textContent = "";
 
     try {
       const response = await fetch("https://formspree.io/f/xbddrnpz", {
-          method: 'POST',
-          body: formData,
-          headers: {
-              'Accept': 'application/json'
-          }
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
       });
 
       if (response.ok) {
         form.reset();
         msg.textContent = "Message sent!";
-        msg.className = "mt-4 font-bold text-peach";
+        msg.className = "text-sm font-medium text-green-600";
       } else {
         msg.textContent = "Something went wrong...";
-        msg.className = "mt-4 font-bold text-red-700";
+        msg.className = "text-sm font-medium text-red-600";
       }
     } catch {
       msg.textContent = "Network error.";
-      msg.className = "mt-4 font-bold text-red-700";
+      msg.className = "text-sm font-medium text-red-600";
     } finally {
       button.disabled = false;
       button.textContent = "Send";
       msg.classList.remove("hidden");
     }
   });
-
-  // Typewriter effect for about cards
-  function typewriterEffect(element, text, speed = 10) {
-    let i = 0;
-    element.textContent = '';
-    element.classList.add('typewriter-text');
-
-    function type() {
-      if (i < text.length) {
-        element.textContent += text.charAt(i);
-        i++;
-        setTimeout(type, speed);
-      } else {
-        // Let cursor blink twice before hiding
-        setTimeout(() => element.classList.add('done'), 2000);
-      }
-    }
-    type();
-  }
-
-  const sectionsA = [
-    document.getElementById('home'),
-    document.getElementById('about'),
-    document.getElementById('menu'),
-    document.getElementById('contact'),
-  ].filter(Boolean);
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Find typewriter elements within this section that haven't animated yet
-        const typewriterElements = entry.target.querySelectorAll('[data-typewriter]:not(.typewriter-done)');
-        typewriterElements.forEach(el => {
-          el.classList.add('typewriter-done'); // Mark as animated
-          const text = el.dataset.typewriter;
-          typewriterEffect(el, text);
-        });
-
-        // Trigger CSS animations for title-typewriter and decorative-line
-        const animatedElements = entry.target.querySelectorAll('.title-typewriter:not(.animate), .decorative-line:not(.animate)');
-        animatedElements.forEach(el => {
-          el.classList.add('animate');
-        });
-      }
-    });
-  }, { threshold: 0.3 });
-
-  sectionsA.forEach(section => observer.observe(section));
-
-
 });
-
-
-
