@@ -415,9 +415,6 @@
   .flex-row {
     flex-direction: row;
   }
-  .flex-wrap {
-    flex-wrap: wrap;
-  }
   .items-center {
     align-items: center;
   }
@@ -1207,8 +1204,17 @@ html {
   height: 100%;
   object-fit: cover;
 }
+.menu-tabs {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.menu-tabs::-webkit-scrollbar {
+  display: none;
+}
 .menu-tab {
   padding: 0.5rem 1rem;
+  white-space: nowrap;
   border-radius: 0.5rem;
   background: transparent;
   color: var(--color-blue);

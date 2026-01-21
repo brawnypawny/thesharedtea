@@ -257,9 +257,21 @@ html {
     object-fit: cover;
 }
 
+/* Menu tabs container */
+.menu-tabs {
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+
+.menu-tabs::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Opera */
+}
+
 /* Menu tabs */
 .menu-tab {
     padding: 0.5rem 1rem;
+    white-space: nowrap;
     border-radius: 0.5rem;
     background: transparent;
     color: var(--color-blue);
