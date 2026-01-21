@@ -238,8 +238,8 @@ html {
 
 .gallery-item {
     flex-shrink: 0;
-    width: 280px;
-    height: 350px;
+    width: 400px;
+    height: 300px;
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -390,14 +390,14 @@ html {
 /* Utility classes for responsiveness */
 @media (min-width: 768px) {
     .gallery-item {
-        width: 320px;
-        height: 400px;
+        width: 480px;
+        height: 320px;
     }
 }
 
 @media (min-width: 1024px) {
     .gallery-item {
-        width: 350px;
-        height: 450px;
+        width: 560px;
+        height: 350px;
     }
 }
