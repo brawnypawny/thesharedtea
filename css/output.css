@@ -58,7 +58,7 @@
     --color-taupe: #b3b199;
     --font-heading: "Playfair Display", serif;
     --font-body: "Inter", sans-serif;
-    --font-mandarin: "DotGothic16", sans-serif;
+    --font-mandarin: "Hachi Maru Pop", cursive;
   }
 }
 @layer base {
@@ -279,8 +279,8 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
-  .mt-6 {
-    margin-top: calc(var(--spacing) * 6);
+  .mt-15 {
+    margin-top: calc(var(--spacing) * 15);
   }
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
@@ -979,14 +979,14 @@
       line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
+  .lg\:-mt-15 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * -15);
+    }
+  }
   .lg\:mt-8 {
     @media (width >= 64rem) {
       margin-top: calc(var(--spacing) * 8);
-    }
-  }
-  .lg\:mt-20 {
-    @media (width >= 64rem) {
-      margin-top: calc(var(--spacing) * 20);
     }
   }
   .lg\:grid-cols-2 {
@@ -1022,6 +1022,9 @@
       line-height: var(--tw-leading, var(--text-9xl--line-height));
     }
   }
+}
+.mandarin-bold {
+  text-shadow: -2px -2px 0 currentColor, 0 -2px 0 currentColor, 2px -2px 0 currentColor, -2px 0 0 currentColor, 2px 0 0 currentColor, -2px 2px 0 currentColor, 0 2px 0 currentColor, 2px 2px 0 currentColor;
 }
 html {
   scroll-behavior: smooth;

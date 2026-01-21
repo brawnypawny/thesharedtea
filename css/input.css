@@ -8,7 +8,21 @@
 
     --font-heading: "Playfair Display", serif;
     --font-body: "Inter", sans-serif;
-    --font-mandarin: "DotGothic16", sans-serif;
+    --font-mandarin: "Hachi Maru Pop", cursive;
+}
+
+
+/* Bold variant for mandarin font (Hachi Maru Pop has no bold weight) */
+.mandarin-bold {
+  text-shadow:
+    -2px -2px 0 currentColor,
+     0   -2px 0 currentColor,
+     2px -2px 0 currentColor,
+    -2px  0   0 currentColor,
+     2px  0   0 currentColor,
+    -2px  2px 0 currentColor,
+     0    2px 0 currentColor,
+     2px  2px 0 currentColor;
 }
 
 /* Base styles */
